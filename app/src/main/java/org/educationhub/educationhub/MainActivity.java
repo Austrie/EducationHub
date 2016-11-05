@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.volley.Cache;
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity
     private ListView listView;
     private FeedListAdapter listAdapter;
     private List<FeedItem> feedItems;
-    private String URL_FEED = "http://api.androidhive.info/feed/feed.json";
+    private Intent intent;
+    private String URL_FEED = "https://raw.githubusercontent.com/Austrie/EducationHub/master/jsonStuff/assignments.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,14 @@ public class MainActivity extends AppCompatActivity
 
         listAdapter = new FeedListAdapter(this, feedItems);
         listView.setAdapter(listAdapter);
+        listView.setOnItemClickListener((new ListView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                intent = new Intent(MainActivity.this, AssignmentActivity.class);
+                intent.putExtra("position", (position + 1));
+                startActivity(intent);
+            }
+        }));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -124,15 +134,15 @@ public class MainActivity extends AppCompatActivity
 
                 FeedItem item = new FeedItem();
                 item.setId(feedObj.getInt("id"));
-                item.setName(feedObj.getString("name"));
+                item.setName(feedObj.getString("title"));
 
                 // Image might be null sometimes
                 String image = feedObj.isNull("image") ? null : feedObj
                         .getString("image");
                 item.setImge(image);
-                item.setStatus(feedObj.getString("status"));
-                item.setProfilePic(feedObj.getString("profilePic"));
-                item.setTimeStamp(feedObj.getString("timeStamp"));
+                item.setStatus(feedObj.getString("description"));
+                //item.setProfilePic(feedObj.getString("profilePic"));
+                item.setTimeStamp(feedObj.getString("dueDate"));
 
                 // url might be null sometimes
                 String feedUrl = feedObj.isNull("url") ? null : feedObj
@@ -142,7 +152,7 @@ public class MainActivity extends AppCompatActivity
                 feedItems.add(item);
             }
 
-            // notify data changes to list adapater
+            // notify data changes to list adapter
             listAdapter.notifyDataSetChanged();
         } catch (JSONException e) {
             e.printStackTrace();
@@ -174,7 +184,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_search) {
             return true;
         }
 
@@ -187,13 +197,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_add) {
+            intent = new Intent(MainActivity.this, AddActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_share) {
 

@@ -6,7 +6,7 @@ package org.educationhub.educationhub.newsfeedparts;
 
 public class FeedItem {
     private int id;
-    private String name, status, image, profilePic, timeStamp, url;
+    private String name, status, image, profilePic, timeStamp, url, details, teacher, classs;
 
     public FeedItem() {
     }
@@ -21,6 +21,35 @@ public class FeedItem {
         this.profilePic = profilePic;
         this.timeStamp = timeStamp;
         this.url = url;
+    }
+
+    public FeedItem(int id, String name, String image, String status,
+                    String profilePic, String timeStamp, String url, String details, String teacher, String classs) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.status = status;
+        this.profilePic = profilePic;
+        this.timeStamp = timeStamp;
+        this.url = url;
+        this.details = details;
+        this.teacher = teacher;
+        this.classs = classs;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public String getClasss() {
+        return classs;
+    }
+    public void setClasss(String classs) {
+        this.classs = classs;
     }
 
     public int getId() {

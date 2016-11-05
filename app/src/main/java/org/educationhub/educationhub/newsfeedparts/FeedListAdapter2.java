@@ -4,12 +4,6 @@ package org.educationhub.educationhub.newsfeedparts;
  * Created by Shane Austrie on 11/4/2016.
  */
 
-import org.educationhub.educationhub.R;
-import org.educationhub.educationhub.newsfeedparts.AppController;
-import org.educationhub.educationhub.newsfeedparts.FeedItem;
-
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
@@ -23,15 +17,18 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
 
-public class FeedListAdapter extends BaseAdapter {
+import org.educationhub.educationhub.R;
+
+import java.util.List;
+
+public class FeedListAdapter2 extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<FeedItem> feedItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
-    public FeedListAdapter(Activity activity, List<FeedItem> feedItems) {
+    public FeedListAdapter2(Activity activity, List<FeedItem> feedItems) {
         this.activity = activity;
         this.feedItems = feedItems;
     }
@@ -63,16 +60,22 @@ public class FeedListAdapter extends BaseAdapter {
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
 
-        TextView name = (TextView) convertView.findViewById(R.id.title);
+        TextView name = (TextView) convertView.findViewById(R.id.title_AA);
         TextView timestamp = (TextView) convertView
-                .findViewById(R.id.due);
+                .findViewById(R.id.due_AA);
         TextView statusMsg = (TextView) convertView
-                .findViewById(R.id.description);
-        TextView url = (TextView) convertView.findViewById(R.id.txtUrl);
+                .findViewById(R.id.details_AA);
+        TextView url = (TextView) convertView.findViewById(R.id.txtUrl_AA);
+        TextView classs = (TextView) convertView.findViewById(R.id.class_AA);
+        TextView teacher = (TextView) convertView.findViewById(R.id.teacher_AA);
 
         FeedItem item = feedItems.get(position);
-
-        name.setText(item.getName());
+        try {
+        name.setText(item.getName()); } catch(Exception e) {}
+        try {
+        classs.setText(item.getClasss()); } catch(Exception e) {}
+        try {
+        teacher.setText(item.getTeacher()); } catch(Exception e) {}
 
         // Converting timestamp into x ago format
         CharSequence timeAgo = DateUtils.getRelativeTimeSpanString(
