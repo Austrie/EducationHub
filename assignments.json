@@ -1,0 +1,27 @@
+
+[
+	{
+		"id": 1,
+		"class": "Algebra",
+		"professor": "Johnson",
+		"details": "Ch 5 Problems",
+		"dueDate": "1478318400000",
+		"url": null
+	}, 
+	{
+		"id": 2,
+		"class": "Physical Science",
+		"professor": "Roth",
+		"details": "Types of rocks sheet",
+		"dueDate": "1478494800000",
+		"url": "https://www.youtube.com/watch?v=17l2LrjZi9o"
+	},
+	{
+		"id": 3,
+		"class": "Social Studies",
+		"professor": "Bodenheimer",
+		"details": "Chapter 7, questions 1-4",
+		"dueDate": "1478581200000",
+		"url": null
+	}
+]
