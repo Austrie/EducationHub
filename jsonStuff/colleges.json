@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1, 
+    "college": "Vanderbilt University",
+    "commonApp": true,
+    "deadline": "1483246800000",
+    "url": "http://admissions.vanderbilt.edu/apply/"
+  },
+  {
+    "id": 2, 
+    "college": "Georgia Institute of Technology",
+    "commonApp": true,
+    "deadline": "1483246800000",
+    "url": "http://admission.gatech.edu/apply"
+  },
+  {
+    "id": 3, 
+    "college": "Mary Baldwin College" ,
+    "commonApp": false,
+    "deadline": "1480568400000",
+    "url": "http://www.marybaldwin.edu/admissions/apply/"
+  },
+  {
+    "id": 4, 
+    "college": "Spelman College",
+    "commonApp": true,
+    "deadline": "1485925200000",
+    "url": "http://www.spelman.edu/admissions/applying-to-spelman"
+  },
+  {
+    "id": 5, 
+    "college": "Morehouse College",
+    "commonApp": true,
+    "deadline": "1485925200000",
+    "url": "http://www.morehouse.edu/admissions/apply.html"
+  },
+  {
+    "id": 6, 
+    "college": "Harvard University",
+    "commonApp": true,
+    "deadline": "1483419600000",
+    "url": "http://www.gsas.harvard.edu/apply"
+  },
+  {
+    "id": 7,
+    "college": "University of Texas - Austin",
+    "commonApp": false,
+    "deadline": "1480568400000",
+    "url": "https://admissions.utexas.edu/apply"
+  },
+  {
+    "id": 8,
+    "college": "California Institute of Technology",
+    "commonApp": true,
+    "deadline": "1483419600000",
+    "url": "https://www.admissions.caltech.edu"
+  }
+]
