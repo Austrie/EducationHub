@@ -23,5 +23,45 @@
 		"details": "Chapter 7, questions 1-4",
 		"dueDate": "1478581200000",
 		"url": null
+	},
+	{
+		"id": 4,
+		"class": "Language Arts",
+		"professor": "Adams",
+		"details": "Read Chapter 3 of Lord of the Flies",
+		"dueDate": "1478581200000",
+		"url": null
+	},
+	{
+		"id": 5,
+		"class": "Spanish",
+		"professor": "Gardener",
+		"details": "Study sports vocab",
+		"dueDate": "1478581200000",
+		"url": "https://quizlet.com/169068/spanish-sports-vocabulary-flash-cards/"
+	},
+	{
+		"id": 6,
+		"class": "Social Studies",
+		"professor": "Bodenheimer",
+		"details": "Chapter 7, questions 5-9",
+		"dueDate": "1478926800000",
+		"url": null
+	},
+	{
+		"id": 7,
+		"class": "Algebra",
+		"professor": "Johnson",
+		"details": "Chapter 6 problems",
+		"dueDate": "1478926800000",
+		"url": null
+	},
+	{
+		"id": 8,
+		"class": "Language Arts",
+		"professor": "Adams",
+		"details": "Read Ch 4 of Lord of the Flies",
+		"dueDate": "1478926800000",
+		"url": null
 	}
 ]
