@@ -186,6 +186,18 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_search) {
             return true;
+        } else if (id == R.id.action_colleges) {
+            intent = new Intent(MainActivity.this, CollegesActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.action_scholarships) {
+            intent = new Intent(MainActivity.this, ScholarshipActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.action_financialaid) {
+            intent = new Intent(MainActivity.this, FinAidActivity.class);
+            startActivity(intent);
+
         }
 
         return super.onOptionsItemSelected(item);

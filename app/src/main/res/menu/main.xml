@@ -3,10 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_colleges"
+    android:id="@+id/action_colleges"
+    android:orderInCategory="100"
+    android:title="Colleges"
+    app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_scholarships"
         android:orderInCategory="100"
-        android:title="Colleges"
+        android:title="Scholarship"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_financialaid"
+        android:orderInCategory="100"
+        android:title="Financial Aid"
+        app:showAsAction="never" />
+
 
     <item
         android:id="@+id/action_search"
